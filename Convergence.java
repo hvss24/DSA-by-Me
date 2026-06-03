@@ -16,7 +16,7 @@ public class Convergence {
             for(int i=0; i<med; i++){
                 if(arr[i] != arr[med]){
                     count1++;
-                }too
+                }
             }
             for(int i=med; i<n; i++){
                 if(arr[i] != arr[med]){
