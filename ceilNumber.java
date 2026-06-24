@@ -1,22 +1,19 @@
 public class ceilNumber {
     public static int ceilingIdx(int arr[], int target){
+        //ceiling of a number means that samllest number that is greater than or equal to target
         int s = 0;
         int e = arr.length-1;
-        int ans = -1;
         while(s <= e){
             int mid = s+(e-s)/2;
-            if(target <= arr[mid]){
-                ans = mid;
+            if(arr[mid] > target){
                 e = mid-1;
             }
-            else{
+            else if(arr[mid] < target){
                 s = mid+1;
             }
+            else return mid;
         }
-        if(ans == -1){
-            System.out.println("There is no element in the array that is greater than or equal to target.That's why we are returning -1.");
-        }
-        return ans;
+        return s;
     }
     public static void main(String[] args) {
         //find ceiling of a number(target) according to the given array.
